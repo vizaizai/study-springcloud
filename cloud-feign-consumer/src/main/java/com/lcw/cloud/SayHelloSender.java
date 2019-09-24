@@ -13,8 +13,12 @@ public class SayHelloSender {
     @Autowired
     private SayHelloOutput sayHelloOutput;
 
+    /**
+     * 5秒延时消息
+     * @param msg
+     */
     public void sendMsg(String msg) {
-        sayHelloOutput.output().send(MessageBuilder.withPayload("hello:" + msg).build());
+        sayHelloOutput.output().send(MessageBuilder.withPayload("hello:" + msg).setHeader("x-delay",5000).build());
     }
 
 }

@@ -14,7 +14,7 @@ public class SinkReceiver {
     private static Logger logger = LoggerFactory.getLogger(SinkReceiver.class);
 
     @StreamListener(SayHelloInput.INPUT)
-    public void receive(Object payload) {
-        logger.info("Received: {}",payload );
+    public void receive(String payload) {
+        logger.info("Received: {}",payload);
     }
 }
