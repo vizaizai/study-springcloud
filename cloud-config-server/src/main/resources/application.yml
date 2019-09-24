@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/firelcw/cloud-config-pro.git
+          username: 849321375@qq.com
+          password: lcw158852
+        encrypt:
+          enabled: true
+server:
+    port: 1000
+
+encrypt:
+  key: didispace

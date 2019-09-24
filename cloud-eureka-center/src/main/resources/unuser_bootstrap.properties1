@@ -1,0 +1,7 @@
+spring.application.name= eureka-server-center
+# server.port=5000
+
+# config\u914D\u7F6E
+spring.cloud.config.uri= http://localhost:1000
+spring.cloud.config.profile= dev
+spring.cloud.config.label= master
