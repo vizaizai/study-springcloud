@@ -20,7 +20,7 @@ public class HelloController {
     private String instance;
 
     @GetMapping("/hello")
-    public String hello(@RequestHeader String token) {
+    public String hello(@RequestHeader(required = false) String token) {
         String services = "Services: " + discoveryClient.getServices()+ " instance:"+instance + " token" + token;
         System.out.println(services );
         return services;

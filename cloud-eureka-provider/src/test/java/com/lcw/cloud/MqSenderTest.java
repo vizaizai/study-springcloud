@@ -24,12 +24,12 @@ public class MqSenderTest {
 
     @Test
     public void sinkSenderTester() {
-        sinkSender.output().send(MessageBuilder.withPayload("produce a message ：http://blog.didispace.com").build());
+        sinkSender.output().send(MessageBuilder.withPayload("produce a message : hello rabbitmq").build());
     }
 
     public interface SinkSender {
 
-        String OUTPUT = "hello-topic";
+        String OUTPUT = "say-hello";
 
         @Output(SinkSender.OUTPUT)
         MessageChannel output();

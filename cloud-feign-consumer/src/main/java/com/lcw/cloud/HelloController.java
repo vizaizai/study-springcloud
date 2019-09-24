@@ -18,9 +18,12 @@ public class HelloController {
 
     @Autowired
     private HelloClient helloClient;
+    @Autowired
+    private SayHelloSender sayHelloSender;
 
     @GetMapping("/hello")
-    public String hello() {
+    public String hello(String msg) {
+       sayHelloSender.sendMsg(msg);
        return helloClient.hello();
     }
 
